@@ -1,10 +1,12 @@
-# pcm5102a-for-armbian-orangepi-zero
+# PCM5102a DAC running Armbian on OrangePi-Zero
+
+[Writeup](https://hackaday.io/project/162373-orangepi-zero-pulse-music-server-using-i2s-dac)
 
 This repository contains the device tree layer and source for pcm5102a kernel module for OrangePi Zero running under Armbian. All this to be able to run Sabre es9023 I2S sound card on OrangePi Zero.
 
 Since Armbian 5.30 it switched to device tree to setup device peripherals. Along with this change somehow a lot of features lost their support, therefore it is not as straightforward to enable I2S.
 
-I prepared GitHub repo to do it quickly
+I prepared this repo to do it quickly
 
 So first get it from GitHub
 
