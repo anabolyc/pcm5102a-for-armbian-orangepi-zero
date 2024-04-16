@@ -1,0 +1,7 @@
+.[Mm]odule*
+[Mm]odule*
+
+.pcm5102a.*
+pcm5102a.ko
+pcm5102a.mod*
+pcm5102a.o
