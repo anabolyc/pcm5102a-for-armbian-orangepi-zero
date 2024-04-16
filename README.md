@@ -48,7 +48,10 @@ $ sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build
 Now you are ready to build. The first command produces `pcm5102a.ko` file among others. Second will copy it to the appropriate kernel modules folder.
 
 ```bash
-$ make all
+$ make all && sudo make install
+```
+
+```bash
 make -C /lib/modules/6.6.16-current-sunxi/build M=/home/dronische/dev/pcm5102a-for-armbian-orangepi-zero modules
 make[1]: Entering directory '/usr/src/linux-headers-6.6.16-current-sunxi'
   CC [M]  /home/dronische/dev/pcm5102a-for-armbian-orangepi-zero/pcm5102a.o
@@ -56,8 +59,6 @@ make[1]: Entering directory '/usr/src/linux-headers-6.6.16-current-sunxi'
   CC [M]  /home/dronische/dev/pcm5102a-for-armbian-orangepi-zero/pcm5102a.mod.o
   LD [M]  /home/dronische/dev/pcm5102a-for-armbian-orangepi-zero/pcm5102a.ko
 make[1]: Leaving directory '/usr/src/linux-headers-6.6.16-current-sunxi'
-$
-$ sudo make install
 sudo cp pcm5102a.ko /lib/modules/6.6.16-current-sunxi
 sudo depmod -a
 ```
@@ -85,7 +86,7 @@ snd_soc_core          118784 5 sun4i_i2s,sun8i_codec_analog,snd_soc_simple_card_
 Note: this will work even if the card is not connected, the board will output to appropriate pins and it doesn't really care if someone listens or not. So now let's check if audio will produce
 
 ```
-speaker-test -t sine -f 2500 -c 2
+$ speaker-test -t wav -c 2
 ```
 
-And finally, I can hear a beeping sound in both speakers. Hooray!
+And finally, I can hear a sound in both speakers. Hooray!
