@@ -1,5 +1,17 @@
 # PCM5102a DAC running Armbian on OrangePi-Zero
 
+## Disclamer
+
+As of 2024, pcm5102a driver is a part of the standard Linux kernel shipped with the Armbian, so most of the below is no longer an issue that needs to be solved this hard. Only dts file is needed to make it work, and single command will do it (assuming you've pulled that repo)
+
+```bash
+sudo armbian-add-overlay i2s-sound.dts
+```
+
+Therefore I'm archiving this repo to only keep it for history.
+
+## Original story begins here
+
 [Writeup](https://hackaday.io/project/162373-orangepi-zero-pulse-music-server-using-i2s-dac)
 
 This repository contains the device tree layer and source for pcm5102a kernel module for OrangePi Zero running under Armbian. All this to be able to run Sabre es9023 I2S sound card on OrangePi Zero.
