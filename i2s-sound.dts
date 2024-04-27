@@ -30,7 +30,7 @@
 		__overlay__ {
 			sound_i2s {
 				compatible = "simple-audio-card";
-				simple-audio-card,name = "I2S-master";
+				simple-audio-card,name = "hifi-orange-pi";
 				simple-audio-card,mclk-fs = <256>;
 				simple-audio-card,format = "i2s";
 		                status = "okay";
